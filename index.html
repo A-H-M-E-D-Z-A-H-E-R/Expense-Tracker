@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Expense Tracker</h1>
+        <p>Track your expenses and manage your spending.</p>
+      </header>
+
+      <section class="expense-form">
+        <div class="input-group">
+          <label for="expense-name">Expense</label>
+          <input type="text" id="expense-name" placeholder="e.g. Keyboard" />
+        </div>
+
+        <div class="input-group">
+          <label for="expense-amount">Amount</label>
+          <input
+            type="number"
+            id="expense-amount"
+            placeholder="e.g. 850"
+            min="0"
+          />
+        </div>
+
+        <button id="add-expense">Add Expense</button>
+      </section>
+
+      <section class="summary">
+        <div class="summary-card">
+          <span>Total Expenses</span>
+          <strong id="total-expenses">$0</strong>
+        </div>
+
+        <button id="clear-all" class="danger-btn">Clear All</button>
+      </section>
+
+      <section class="controls">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search expenses..."
+        />
+
+        <select id="filter-select">
+          <option value="all">All</option>
+          <option value="highest">Highest</option>
+          <option value="lowest">Lowest</option>
+        </select>
+      </section>
+
+      <section class="expenses-section">
+        <h2>Expenses</h2>
+
+        <div id="empty-message" class="empty-message">No expenses yet.</div>
+
+        <div id="expense-list" class="expense-list">
+          <!-- JavaScript will render expenses here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
