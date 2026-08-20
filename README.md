@@ -4,29 +4,35 @@ A simple and modern **Expense Tracker** built with vanilla HTML, CSS, and JavaSc
 
 The project allows users to add expenses, calculate their total spending, search through expenses, sort them by amount, and keep their data saved using the browser's `localStorage`.
 
+## 📸 Preview
+
+<p align="center">
+  <img src="preview.png" alt="Expense Tracker Preview" width="900">
+</p>
+
 ## ✨ Features
 
-* Add new expenses with a name and amount
-* Automatically calculate the total expenses
-* Save expenses using `localStorage`
-* Restore saved expenses when the page is reopened
-* Search expenses by name
-* Sort expenses by:
+- Add new expenses with a name and amount
+- Automatically calculate the total expenses
+- Save expenses using `localStorage`
+- Restore saved expenses when the page is reopened
+- Search expenses by name
+- Sort expenses by:
+  - All
+  - Highest amount
+  - Lowest amount
 
-  * All
-  * Highest amount
-  * Lowest amount
-* Clear all expenses
-* Automatically update the expense list
-* Responsive layout for smaller screens
-* Dark modern interface
+- Clear all expenses
+- Automatically update the expense list
+- Responsive layout for smaller screens
+- Dark modern interface
 
 ## 🛠️ Technologies
 
-* **HTML5** — Page structure and semantic elements
-* **CSS3** — Styling, layout, responsive design, and dark UI
-* **JavaScript (ES6+)** — Application logic and DOM manipulation
-* **LocalStorage API** — Persistent expense data
+- **HTML5** — Page structure and semantic elements
+- **CSS3** — Styling, layout, responsive design, and dark UI
+- **JavaScript (ES6+)** — Application logic and DOM manipulation
+- **LocalStorage API** — Persistent expense data
 
 ## 📂 Project Structure
 
@@ -118,12 +124,12 @@ The **Clear All** button removes the stored expenses, resets the array, clears t
 
 The interface uses a minimal dark theme with:
 
-* Dark background
-* Neutral gray borders
-* Rounded cards and inputs
-* Simple typography
-* Responsive layouts
-* Focused visual hierarchy
+- Dark background
+- Neutral gray borders
+- Rounded cards and inputs
+- Simple typography
+- Responsive layouts
+- Focused visual hierarchy
 
 The main layout is limited to a maximum width of `900px` to keep the application comfortable to use on larger screens.
 
@@ -133,10 +139,10 @@ The layout adapts to smaller screens using a CSS media query.
 
 On screens below `700px`:
 
-* The expense form becomes a single-column layout
-* The search and filter controls stack vertically
-* The summary section becomes vertically aligned
-* The add button takes the full available width
+- The expense form becomes a single-column layout
+- The search and filter controls stack vertically
+- The summary section becomes vertically aligned
+- The add button takes the full available width
 
 ## 🚀 Getting Started
 
@@ -166,44 +172,43 @@ This project was built to practice fundamental JavaScript concepts in a real-wor
 
 Key concepts used:
 
-* DOM selection
-* Event listeners
-* Functions
-* Arrays
-* Objects
-* `push()`
-* `filter()`
-* `sort()`
-* `reduce()`
-* Spread syntax
-* Template literals
-* Type conversion
-* JSON serialization
-* `localStorage`
-* Dynamic DOM rendering
-* Responsive CSS
+- DOM selection
+- Event listeners
+- Functions
+- Arrays
+- Objects
+- `push()`
+- `filter()`
+- `sort()`
+- `reduce()`
+- Spread syntax
+- Template literals
+- Type conversion
+- JSON serialization
+- `localStorage`
+- Dynamic DOM rendering
+- Responsive CSS
 
 ## 🔮 Future Improvements
 
 Possible improvements for future versions:
 
-* Add delete functionality for individual expenses
-* Add expense categories
-* Add dates for each expense
-* Add editing functionality
-* Add monthly spending statistics
-* Add income tracking
-* Add charts and visual analytics
-* Add form validation
-* Add currency selection
-* Improve search and filtering so they can work together
+- Add delete functionality for individual expenses
+- Add expense categories
+- Add dates for each expense
+- Add editing functionality
+- Add monthly spending statistics
+- Add income tracking
+- Add charts and visual analytics
+- Add form validation
+- Add currency selection
+- Improve search and filtering so they can work together
 
 ## 📌 Project Status
 
 **Completed — Beginner JavaScript Project**
 
 This project focuses on building a functional frontend application using vanilla JavaScript without relying on frameworks or external libraries.
-
 
 ## 👨‍💻 Developer
 
@@ -212,4 +217,3 @@ This project focuses on building a functional frontend application using vanilla
 Software Engineer & Front-End Developer
 
 Focused on building modern web experiences and improving my skills in JavaScript ,frontend development ,React JS ,and software engineering.
-
