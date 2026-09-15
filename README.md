@@ -1,219 +1,145 @@
-# Expense Tracker
 
-A simple and modern **Expense Tracker** built with vanilla HTML, CSS, and JavaScript.
+# 💰 Expense Tracker
 
-The project allows users to add expenses, calculate their total spending, search through expenses, sort them by amount, and keep their data saved using the browser's `localStorage`.
+A simple and modern **Expense Tracker** built with **HTML, CSS, and Vanilla JavaScript**.
 
-## 📸 Preview
+The application allows users to add expenses, calculate total spending, search through expenses, sort them by amount, and persist their data using the browser's `localStorage`.
 
-<p align="center">
-  <img src="preview.png" alt="Expense Tracker Preview" width="900">
-</p>
+## 🌐 Live Demo
+
+[View Live Demo](live-demo-url)
 
 ## ✨ Features
 
-- Add new expenses with a name and amount
-- Automatically calculate the total expenses
-- Save expenses using `localStorage`
-- Restore saved expenses when the page is reopened
-- Search expenses by name
-- Sort expenses by:
-  - All
-  - Highest amount
-  - Lowest amount
+* ➕ Add new expenses with a name and amount
+* 💰 Automatically calculate total expenses
+* 💾 Save expenses using `localStorage`
+* 🔄 Restore saved expenses when the page is reopened
+* 🔎 Search expenses by name
+* 📊 Sort expenses by:
+  * All
+  * Highest amount
+  * Lowest amount
+* 🗑️ Clear all expenses
+* ⚡ Automatically update the expense list
+* 📱 Responsive layout
+* 🎨 Modern dark interface
 
-- Clear all expenses
-- Automatically update the expense list
-- Responsive layout for smaller screens
-- Dark modern interface
+## 🛠️ Tech Stack
 
-## 🛠️ Technologies
+* **HTML5**
+* **CSS3**
+* **JavaScript (ES6+)**
+* **LocalStorage**
 
-- **HTML5** — Page structure and semantic elements
-- **CSS3** — Styling, layout, responsive design, and dark UI
-- **JavaScript (ES6+)** — Application logic and DOM manipulation
-- **LocalStorage API** — Persistent expense data
+## 💾 Data Persistence
 
-## 📂 Project Structure
+Expense data is stored in the browser using the **LocalStorage API**.
+
+The application saves the current expenses and restores them when the page is reopened, allowing the data to persist between browser sessions.
+
+## 🔎 Search & Sorting
+
+The application provides simple tools for managing larger expense lists.
+
+### Search
+
+Users can search for expenses by name. The list is dynamically filtered based on the entered search term.
+
+### Sorting
+
+Expenses can be displayed by:
+
+* All expenses
+* Highest amount
+* Lowest amount
+
+The original expense array is copied before sorting to avoid directly modifying the stored data.
+
+## 🧩 Project Structure
 
 ```text
 Expense-Tracker/
-│
 ├── index.html
 ├── style.css
 └── script.js
-```
+````
 
-## ⚙️ How It Works
+### Architecture
 
-### 1. Adding an Expense
+* **`index.html`** — Application structure, expense form, controls, summary, and expense list.
+* **`style.css`** — Complete styling, dark interface, layout, and responsive design.
+* **`script.js`** — Expense management, calculations, search, sorting, LocalStorage, and dynamic DOM rendering.
 
-The user enters an expense name and amount, then clicks **Add Expense**.
+## 🧮 Expense Calculations
 
-JavaScript creates an expense object:
+The total amount is calculated dynamically using JavaScript's `reduce()` method.
 
-```javascript
-{
-  name: "Keyboard",
-  amount: 850
-}
-```
+Whenever the expense list changes, the displayed total is recalculated to remain synchronized with the stored expenses.
 
-The object is added to the expenses array and the interface is updated.
+## 🎨 Interface
 
-### 2. Calculating the Total
+The application uses a minimal dark interface with:
 
-The total amount is calculated using JavaScript's `reduce()` method:
-
-```javascript
-const total = expenses.reduce((total, expense) => {
-  return total + expense.amount;
-}, 0);
-```
-
-This keeps the displayed total synchronized with the expenses.
-
-### 3. Persistent Data
-
-Expenses are stored in the browser using `localStorage`.
-
-```javascript
-localStorage.setItem("expenses", JSON.stringify(expenses));
-```
-
-When the application starts, previously saved expenses are loaded back into the application.
-
-### 4. Search
-
-The search field filters expenses based on their names.
-
-For example:
-
-```text
-Keyboard
-Mouse
-Monitor
-Headset
-```
-
-Searching for `mouse` will only display the matching expense.
-
-### 5. Sorting
-
-The filter menu allows expenses to be sorted by amount.
-
-**Highest:**
-
-```javascript
-[...expenses].sort((a, b) => b.amount - a.amount);
-```
-
-**Lowest:**
-
-```javascript
-[...expenses].sort((a, b) => a.amount - b.amount);
-```
-
-The original array is copied before sorting so the stored order is not directly modified.
-
-### 6. Clearing Expenses
-
-The **Clear All** button removes the stored expenses, resets the array, clears the list, and returns the total to `$0`.
-
-## 🎨 Design
-
-The interface uses a minimal dark theme with:
-
-- Dark background
-- Neutral gray borders
-- Rounded cards and inputs
-- Simple typography
-- Responsive layouts
-- Focused visual hierarchy
-
-The main layout is limited to a maximum width of `900px` to keep the application comfortable to use on larger screens.
+* Dark background
+* Neutral borders
+* Rounded cards and inputs
+* Simple typography
+* Clear visual hierarchy
+* Responsive controls
+* Maximum content width for comfortable viewing
 
 ## 📱 Responsive Design
 
-The layout adapts to smaller screens using a CSS media query.
+The layout adapts to smaller screens.
 
-On screens below `700px`:
+On mobile devices:
 
-- The expense form becomes a single-column layout
-- The search and filter controls stack vertically
-- The summary section becomes vertically aligned
-- The add button takes the full available width
+* The expense form switches to a single-column layout
+* Search and filter controls stack vertically
+* The summary section becomes vertically aligned
+* The add button uses the available width
 
-## 🚀 Getting Started
+## 🖼️ Screenshot
 
-No frameworks, packages, or build tools are required.
+<p align="center">
+  <img src="./preview.png" alt="Expense Tracker Preview" width="900">
+</p>
 
-### 1. Clone the repository
+## 🎯 Project Goal
 
-```bash
-git clone (https://github.com/A-H-M-E-D-Z/Expense-Tracker.git)
-```
+This project was built as a practical JavaScript project to strengthen **DOM manipulation, event handling, arrays, objects, data persistence, dynamic rendering, and responsive UI development**.
 
-### 2. Open the project
-
-Navigate to the project directory:
-
-```bash
-cd Expense-Tracker
-```
-
-### 3. Run the project
-
-Open `index.html` directly in your browser, or use **VS Code Live Server** for a better development experience.
+The goal was to build a functional expense management application using vanilla JavaScript without external frameworks or libraries.
 
 ## 🧠 What I Practiced
 
-This project was built to practice fundamental JavaScript concepts in a real-world style application.
+* DOM selection
+* Event listeners
+* Functions
+* Arrays and objects
+* `push()`
+* `filter()`
+* `sort()`
+* `reduce()`
+* Spread syntax
+* Template literals
+* Type conversion
+* JSON serialization
+* LocalStorage
+* Dynamic DOM rendering
+* Responsive CSS
 
-Key concepts used:
-
-- DOM selection
-- Event listeners
-- Functions
-- Arrays
-- Objects
-- `push()`
-- `filter()`
-- `sort()`
-- `reduce()`
-- Spread syntax
-- Template literals
-- Type conversion
-- JSON serialization
-- `localStorage`
-- Dynamic DOM rendering
-- Responsive CSS
-
-## 🔮 Future Improvements
-
-Possible improvements for future versions:
-
-- Add delete functionality for individual expenses
-- Add expense categories
-- Add dates for each expense
-- Add editing functionality
-- Add monthly spending statistics
-- Add income tracking
-- Add charts and visual analytics
-- Add form validation
-- Add currency selection
-- Improve search and filtering so they can work together
-
-## 📌 Project Status
-
-**Completed — Beginner JavaScript Project**
-
-This project focuses on building a functional frontend application using vanilla JavaScript without relying on frameworks or external libraries.
-
-## 👨‍💻 Developer
+## 👨‍💻 Author
 
 **Ahmed Zaher Abdelmohsen**
 
-Software Engineer & Front-End Developer
+Frontend Developer focused on building modern, responsive, and user-friendly web experiences.
 
-Focused on building modern web experiences and improving my skills in JavaScript ,frontend development ,React JS ,and software engineering.
+* Portfolio: `<portfolio-url>`
+* GitHub: `https://github.com/A-H-M-E-D-Z-A-H-E-R`
+
+---
+
+⭐ If you found this project interesting, feel free to explore the repository.
+
