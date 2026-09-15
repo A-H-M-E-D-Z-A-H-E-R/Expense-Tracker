@@ -7,7 +7,7 @@ The application allows users to add expenses, calculate total spending, search t
 
 ## 🌐 Live Demo
 
-[View Live Demo](live-demo-url)
+[View Live Demo](https://a-h-m-e-d-z-a-h-e-r.github.io/Expense-Tracker/)
 
 ## ✨ Features
 
